@@ -5,7 +5,11 @@ mobile phone that is held by the user. The mobile phone and the ESP32 are connec
 and send it to the ESP32 which according to the x and y axis values of the mobile phone position, drives the motors.
 
 Hardware Components: 
+
 1 - ESP32 with builtin bluetooth and Wifi
+
 2 - Chassis Kit (body of the car)
+
 3 - Motot Driver Sheild
+
 4 - Batteries, jumper wires, and switches 
