@@ -6,7 +6,7 @@ and send it to the ESP32 which according to the x and y axis values of the mobil
 
 Hardware Components: 
 
-1 - ESP32 with builtin bluetooth and Wifi
+1 - ESP32 with built in bluetooth and Wifi
 
 2 - Chassis Kit (body of the car)
 
