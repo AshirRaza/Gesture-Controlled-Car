@@ -7,6 +7,9 @@ and send it to the ESP32 which according to the x and y axis values of the mobil
 # Hardware Components: 
 
 1 - ESP32 with built in bluetooth and Wifi
+
 2 - Chassis Kit (body of the car)
+
 3 - Motot Driver Sheild
+
 4 - Batteries, jumper wires, and switches 
