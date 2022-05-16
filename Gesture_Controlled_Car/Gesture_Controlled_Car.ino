@@ -1,30 +1,27 @@
-
-
-BluetoothSerial SerialBT;
-#include <Dabble.h>
-#include <DabbleInputs.h>
-#include <SensorModule.h>
-#include <motorControls.h>
-
 #define CUSTOM_SETTINGS
 #define INCLUDE_SENSOR_MODULE
-#include <AFMotor.h>
+#include <DabbleESP32.h>
 
-#define INCLUDE_DABBLEINPUTS_MODULE
-#define INCLUDE_MOTORCONTROL_MODULE
 
 void setup() {
-  Serial.begin(115200);
-  SerialBT.begin("ESP32test"); //Bluetooth device name
-  Serial.println("The device started, now you can pair it with bluetooth!");
+  Serial.begin(115200);    // make sure your Serial Monitor is also set at this baud rate.
+  Dabble.begin("MyEsp32");   //set bluetooth name of your device
 }
 
 void loop() {
-  if (Serial.available()) {
-    SerialBT.write(Serial.read());
-  }
-  if (SerialBT.available()) {
-    Serial.write(SerialBT.read());
-  }
-  delay(20);
+  Dabble.processInput();             //this function is used to refresh data obtained from smartphone.Hence calling this function is mandatory in order to get data properly from your mobile.
+  print_Accelerometer_data();
+}
+
+void print_Accelerometer_data()
+{
+  Serial.print("X_axis: ");
+  Serial.print(Sensor.getAccelerometerXaxis(), 4);
+  Serial.print('\t');
+  Serial.print("Y_axis: ");
+  Serial.print(Sensor.getAccelerometerYaxis(), 4);
+  Serial.print('\t');
+  Serial.print("Z_axis: ");
+  Serial.println(Sensor.getAccelerometerZaxis(), 4);
+  Serial.println();
 }
