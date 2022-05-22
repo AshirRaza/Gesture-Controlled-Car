@@ -21,7 +21,7 @@ void loop() {
   Dabble.processInput();             //this function is used to refresh data obtained from smartphone.Hence calling this function is mandatory in order to get data properly from your mobile.
   print_Accelerometer_data();
 
-  if ((Sensor.getAccelerometerYaxis(), 4) >= 4)
+  if ((Sensor.getAccelerometerYaxis()) >= 4)
   {
     digitalWrite (left_f, HIGH);
     digitalWrite (left_b, LOW);
@@ -30,7 +30,7 @@ void loop() {
     delay(200);
   }
 
-  else if ((Sensor.getAccelerometerYaxis(), 4) <= -4)
+  else if ((Sensor.getAccelerometerYaxis()) <= -4)
   {
     digitalWrite (left_f, LOW);
     digitalWrite (left_b, HIGH);
@@ -39,7 +39,7 @@ void loop() {
     delay(200);
   }
 
-  else if ((Sensor.getAccelerometerXaxis(), 4) <= -4)
+  else if ((Sensor.getAccelerometerXaxis()) <= -4)
   {
     digitalWrite (left_f, LOW);
     digitalWrite (left_b, HIGH);
@@ -48,7 +48,7 @@ void loop() {
     delay(200);
   }
 
-  else if ((Sensor.getAccelerometerXaxis(), 4) >= 4)
+  else if ((Sensor.getAccelerometerXaxis()) >= 4)
   {
     digitalWrite (left_f, HIGH);
     digitalWrite (left_b, LOW);
