@@ -59,10 +59,10 @@ void loop() {
 
   else
   {
-    digitalWrite (left_f, HIGH);
-    digitalWrite (left_b, HIGH);
-    digitalWrite (right_f, HIGH);
-    digitalWrite (right_b, HIGH);
+    digitalWrite (left_f, LOW);
+    digitalWrite (left_b, LOW);
+    digitalWrite (right_f, LOW);
+    digitalWrite (right_b, LOW);
     delay(200);
   }
 }
