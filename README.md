@@ -13,3 +13,8 @@ and send it to the ESP32 which according to the x and y axis values of the mobil
 3 - Motot Driver Sheild
 
 4 - Batteries, jumper wires, and switches 
+
+
+# Gesture Controlled Car with camera module
+
+A camera equipped ESP32 is added on the top of the gesture controlled car as an extension to the project. Once supplied with power, the camera records a video in the form of high frequency of images and on real time, the video is streamed on the web server on the given IP address. 
